@@ -111,9 +111,9 @@
   </section>
   <section id="projects">
     <h2>Projects</h2>
-    <h4>Project 1</h4>
+    <a href = https://sympto-quest-phi.vercel.app/login><h2>SymptoQuest</h2></a>
         <p>
-            i did this and that
+            SymptoQuest is a web application that provides accurate medical diagnosis based on user input symptoms
         </p>
   </section>
 
