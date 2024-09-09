@@ -10,8 +10,11 @@
         alert('Your message has been sent');
     }
     function sendEmail() {
-    window.location.href = "mailto:douglasmyu@csu.fullerton.edu?subject=Hello&body=This%20is%20the%20body";
+      window.location.href = "mailto:douglasmyu@csu.fullerton.edu?subject=Hello&body=This%20is%20the%20body";
   }
+    function openGithub() {
+      window.open('https://github.com/Douglasmyu');
+    }
   </script>
   
   <style>
@@ -94,7 +97,7 @@
     </div>
   </div>
   
-  <section id="about">
+  <section id="about"> <!--about me section-->
     <h2>About Me</h2>
     <p>
         hi. I am currently a Computer Science student at Cal State Fullerton.  
@@ -106,24 +109,35 @@
     <p>
         Connect with me!
     </p>
-    <a href = https://github.com/Douglasmyu >github</a>
-    <button on:click={sendEmail}>Send Email</button>
+    <p>
+      <button on:click={openGithub}>github</button>
+    </p>
+    
+    <p> 
+      <button on:click={sendEmail}>Send Email</button>
+    </p>
+   
   </section>
-  <section id="projects">
-    <h2>Projects</h2>
-    <a href = https://sympto-quest-phi.vercel.app/login><h2>SymptoQuest</h2></a>
-        <p>
-            SymptoQuest is a web application that provides accurate medical diagnosis based on user input symptoms
-        </p>
+  <section id="projects"> <!-- projects section-->
+    <article>
+      <h2>Projects</h2>
+        <a href = https://sympto-quest-phi.vercel.app/login><h2>SymptoQuest</h2></a>
+            <p>
+                SymptoQuest is a web application that provides accurate medical diagnosis based on user input symptoms
+            </p>
+    </article>
   </section>
 
-  <section id = "contact">
+  <section id = "contact"> <!-- contact me section-->
     <h2>Contact me</h2>
     <form class="contact-form" on:submit={handleSubmit}></form>
+
     <p>Name</p>
     <input id=name placeholder="Enter Name"/>
+
     <p>Email</p>
     <input id=email placeholder="Enter email"/>
+
     <p>Message</p>
     <textarea id=message placeholder="Enter message"/>
     <button type="submit">Send</button>
