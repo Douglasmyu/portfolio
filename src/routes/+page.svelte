@@ -9,6 +9,9 @@
         event.preventDefault();
         alert('Your message has been sent');
     }
+    function sendEmail() {
+    window.location.href = "mailto:douglasmyu@csu.fullerton.edu?subject=Hello&body=This%20is%20the%20body";
+  }
   </script>
   
   <style>
@@ -50,7 +53,7 @@
         width: 70px;
         height: 70px;
         border-radius: 50%; /* Makes the image circular */
-        object-fit: cover; /* Ensures the image covers the container properly */
+        object-fit: cover; 
         margin-right: 1rem;
         
     }
@@ -58,6 +61,26 @@
     .active-section {
       display: block;
     }
+    h2{
+        font-size: medium;
+        color:#9D5C63;
+    }
+    .button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+  }
+
+  .button-link:hover {
+    background-color: #0056b3;
+  }
   </style>
   
   <div class="navbar">
@@ -80,13 +103,18 @@
     <p>
         When I am not coding, I am probably cooking, trying out new cafes, designing and sewing my own clothes, or going to the gym to practice football.  
     </p>
+    <p>
+        Connect with me!
+    </p>
+    <a href = https://github.com/Douglasmyu >github</a>
+    <button on:click={sendEmail}>Send Email</button>
   </section>
   <section id="projects">
     <h2>Projects</h2>
     <h4>Project 1</h4>
-    <p>
-        i did this and that
-    </p>
+        <p>
+            i did this and that
+        </p>
   </section>
 
   <section id = "contact">
