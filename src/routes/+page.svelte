@@ -68,6 +68,10 @@
         font-size: medium;
         color:#9D5C63;
     }
+    .title{
+      color:#9D5C63;
+      font-size: medium;
+    }
     .button-link {
     display: inline-block;
     padding: 10px 20px;
@@ -106,7 +110,8 @@
     <p>
         When I am not coding, I am probably cooking, trying out new cafes, designing and sewing my own clothes, or going to the gym to practice football.  
     </p>
-    <p>
+    <a href="src/routes/hobbies/+page.svelte">Click here to see my hobbies</a>
+    <p class="title">
         Connect with me!
     </p>
     <p>
@@ -120,7 +125,7 @@
   </section>
   <section id="projects"> <!-- projects section-->
     <article>
-      <h2>Projects</h2>
+      <h2>My Projects</h2>
         <a href = https://sympto-quest-phi.vercel.app/login><h2>SymptoQuest</h2></a>
             <p>
                 SymptoQuest is a web application that provides accurate medical diagnosis based on user input symptoms
@@ -130,7 +135,7 @@
 
   <section id = "contact"> <!-- contact me section-->
     <h2>Contact me</h2>
-    <form class="contact-form" on:submit={handleSubmit}></form>
+    <form class="contact-form" on:submit={handsubmit}></form>
 
     <p>Name</p>
     <input id=name placeholder="Enter Name"/>
