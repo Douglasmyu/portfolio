@@ -5,10 +5,7 @@
     function navigateTo(section) {
       activeSection = section;
     }
-    function handsubmit(event){
-        event.preventDefault();
-        alert('Your message has been sent');
-    }
+
     function sendEmail() {
       window.location.href = "mailto:douglasmyu@csu.fullerton.edu?subject=Hello&body=This%20is%20the%20body";
   }
@@ -47,11 +44,6 @@
       padding: 2rem;
     }
   
-    .about,
-    .projects,
-    .contact {
-      display: none;
-    }
     .navbar img{
         width: 70px;
         height: 70px;
@@ -85,41 +77,58 @@
     font-size: 16px;
   }
 
-  .button-link:hover {
-    background-color: #0056b3;
+
+  .description{
+    background-color: rgba(218, 139, 139, 0.8); /* Light background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgb(75, 69, 69); /* Subtle shadow effect */
+    padding: 15px; /* Spacing inside the box */
+    margin: 15px 0; /* Spacing outside the box */
+    color: #333; /* Text color */
+    font-size: 1rem; /* Font size for the text */
+    max-width: 600px;
+  }
+  .Coolbutton{
+    background-color: rgba(218, 139, 139, 0.8);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px 0;
+    color: #333;
+  }
+  .name{ 
+    font-size: 2rem; 
   }
   </style>
   
   <div class="navbar">
     <div class = "navbar-left">
         <img src= "src/img/pfp.jpg" alt="pfp">
-        <center><p><b>douglas yu</b></p></center>
+        <center><p class="name"><b>douglas yu</b></p></center>
         <a href="#about" class:active={activeSection === 'about'} on:click={() => navigateTo('about')}>About Me</a>
         <a href="#projects" class:active={activeSection === 'projects'} on:click={() => navigateTo('projects')}>Projects</a>
         <a href="#contact" class:active={activeSection === 'contact'} on:click={() => navigateTo('contact')}>Contact Me</a>
-    
     </div>
   </div>
   
   <section id="about"> <!--about me section-->
     <h2>About Me</h2>
-    <p>
+    <p class = "description">
         hi. I am currently a Computer Science student at Cal State Fullerton.  
         I enjoy coding, learning new things, and having fun!
     </p>
     <p>
-        When I am not coding, I am probably cooking, trying out new cafes, designing and sewing my own clothes, or going to the gym to practice football.  
+        When I am not coding, I am probably cooking, trying out new cafes, designing and sewing my own clothes, or gyming  
     </p>
-    <a href="src/routes/hobbies/+page.svelte">Click here to see my hobbies</a>
+    <a href="src/routes/hobbies/+page.svelte">Click here to see my hobbies at work</a>
     <p class="title">
         Connect with me!
     </p>
     <p>
-      <button on:click={openGithub}>github</button>
+      <button class="Coolbutton" on:click={openGithub}>github</button>
     </p>
     
     <p> 
-      <button on:click={sendEmail}>Send Email</button>
+      <button class="Coolbutton" on:click={sendEmail}>Send Email</button>
     </p>
    
   </section>
@@ -127,25 +136,13 @@
     <article>
       <h2>My Projects</h2>
         <a href = https://sympto-quest-phi.vercel.app/login><h2>SymptoQuest</h2></a>
-            <p>
+            <p class="description">
                 SymptoQuest is a web application that provides accurate medical diagnosis based on user input symptoms
+            </p>
+        <a href= https://github.com/Douglasmyu/svelteGPT><h2>SvelteGPT</h2></a>
+            <p class="description">
+              A website to run a chatbox using svelte.  
             </p>
     </article>
   </section>
-
-  <section id = "contact"> <!-- contact me section-->
-    <h2>Contact me</h2>
-    <form class="contact-form" on:submit={handsubmit}></form>
-
-    <p>Name</p>
-    <input id=name placeholder="Enter Name"/>
-
-    <p>Email</p>
-    <input id=email placeholder="Enter email"/>
-
-    <p>Message</p>
-    <textarea id=message placeholder="Enter message"/>
-    <button type="submit">Send</button>
-  </section>
-
   
