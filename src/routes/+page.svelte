@@ -106,7 +106,7 @@
         <center><p class="name"><b>douglas yu</b></p></center>
         <a href="#about" class:active={activeSection === 'about'} on:click={() => navigateTo('about')}>About Me</a>
         <a href="#projects" class:active={activeSection === 'projects'} on:click={() => navigateTo('projects')}>Projects</a>
-        <a href="#contact" class:active={activeSection === 'contact'} on:click={() => navigateTo('contact')}>Contact Me</a>
+        <a href="#links" class:active={activeSection === 'links'} on:click={() => navigateTo('links')}>Links</a>
     </div>
   </div>
   
@@ -119,17 +119,8 @@
     <p>
         When I am not coding, I am probably cooking, trying out new cafes, designing and sewing my own clothes, or gyming  
     </p>
-    <a href="src/routes/hobbies/+page.svelte">Click here to see my hobbies at work</a>
-    <p class="title">
-        Connect with me!
-    </p>
-    <p>
-      <button class="Coolbutton" on:click={openGithub}>github</button>
-    </p>
-    
-    <p> 
-      <button class="Coolbutton" on:click={sendEmail}>Send Email</button>
-    </p>
+    <a href="src/routes/hobbies/+page.svelte">Click here to see my hobbies at work(maybe an icon of food)</a>
+  
    
   </section>
   <section id="projects"> <!-- projects section-->
@@ -146,3 +137,17 @@
     </article>
   </section>
   
+
+  <section id="links" >
+    <h2>add links with logos to github, linkedin, spotify, and email</h2>
+    <p class="title">
+      Connect with me!
+  </p>
+  <p>
+    <button class="Coolbutton" on:click={openGithub}>github</button>
+  </p>
+  
+  <p> 
+    <button class="Coolbutton" on:click={sendEmail}>Send Email</button>
+  </p>
+  </section>
