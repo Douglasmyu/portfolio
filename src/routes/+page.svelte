@@ -8,7 +8,10 @@
 
     function sendEmail() {
       window.location.href = "mailto:douglasmyu@csu.fullerton.edu?subject=Hello&body=This%20is%20the%20body";
-  }
+    }
+    function openLinkedIn(){
+      window.open('https://www.linkedin.com/in/douglas-yu-51614b165/');
+    }
     function openGithub() {
       window.open('https://github.com/Douglasmyu');
     }
@@ -146,7 +149,7 @@
         I enjoy coding, learning new things, and having fun!
     </p>
     <p>
-        When I am not coding, I am probably cooking, trying out new cafes, designing and sewing my own clothes, or gyming  
+        When I am not coding, I am probably cooking, trying out new cafes, designing and sewing my own clothes, or gyming.  
     </p>
     <a href="src/routes/hobbies/+page.svelte">Click here to see my hobbies at work(maybe an icon of food)</a>
   
@@ -172,11 +175,7 @@
     <p class="title">
       Connect with me!
   </p>
-  <p>
-    <button class="Coolbutton" on:click={openGithub}>github</button>
-  </p>
-  
-  <p> 
-    <button class="Coolbutton" on:click={sendEmail}>Send Email</button>
-  </p>
+    <!-- <button class="Coolbutton" on:click={openGithub}>github</button> -->
+    <img src="src/img/gitIcon.png" on:click={openGithub}>
+    <img src="src/img/linkedInIcon.png" on:click={openGithub}>
   </section>
