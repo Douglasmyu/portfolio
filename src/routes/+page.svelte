@@ -2,8 +2,6 @@
     // You can add JavaScript functionality here if needed
     let activeSection = 'about';
 
-    import Button from "./button.svelte";
-    
     function navigateTo(section) {
       activeSection = section;
     }
@@ -19,6 +17,9 @@
     }
     function openSpotify(){
       window.open('https://open.spotify.com/user/douglife-us?si=e9b2a5f65a064dcc');
+    }
+    function openResume(){
+      window.open();
     }
   </script>
   
@@ -178,7 +179,11 @@
       <h2>My Projects</h2>
         <a href = https://sympto-quest-phi.vercel.app/login><h2>SymptoQuest</h2></a>
             <p class="description">
-                SymptoQuest is a web application that provides accurate medical diagnosis based on user input symptoms
+              SymptoQuest is a web application that provides accurate medical diagnosis based on user input symptoms
+            </p>
+        <a href = https://github.com><h2>Nyaan Cat</h2></a>
+            <p class="description">
+              Walk through space as Nyaan the space cat and eat as many smelly fish while dodging the falling bombs
             </p>
         <a href= https://github.com/Douglasmyu/svelteGPT><h2>SvelteGPT</h2></a>
             <p class="description">
