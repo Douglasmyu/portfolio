@@ -1,6 +1,8 @@
 <script> //about me or main page
     // You can add JavaScript functionality here if needed
     let activeSection = 'about';
+
+    import Button from "./button.svelte";
     
     function navigateTo(section) {
       activeSection = section;
@@ -63,26 +65,21 @@
     .active-section {
       display: block;
     }
+
     h2{
         font-size: 40px;
         color:rgba(255, 109, 109, 0.8);
     }
+
+    p{
+      font-size: 18px;
+    }
+
     .title{
       color:#963b44;
       font-size: medium;
     }
-    .button-link {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    cursor: pointer;
-    border: none;
-    font-size: 16px;
-  }
+
 
   .description{
     background-color: rgba(206, 184, 184, 0.8); /* Light background color */
@@ -127,6 +124,17 @@
   }
 }
 
+  :global(body){
+    background-color: #f2eee2;
+    color: #0084f6;
+    transition: background-color 0.3s;
+  }
+
+  :global(body.dark-mode){
+    background-color: #1d3040;
+    color: #bfc2c7;
+  }
+
   .name{ 
     font-size: 2rem; 
   }
@@ -148,6 +156,7 @@
         <a href="#about" class:active={activeSection === 'about'} on:click={() => navigateTo('about')}>About Me</a>
         <a href="#projects" class:active={activeSection === 'projects'} on:click={() => navigateTo('projects')}>Projects</a>
         <a href="#links" class:active={activeSection === 'links'} on:click={() => navigateTo('links')}>Links</a>
+        <button>toggle dark mode</button>
     </div>
   </div>
   
