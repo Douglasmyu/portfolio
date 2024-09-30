@@ -48,6 +48,7 @@
   
     section {
       padding: 2rem;
+      text-align: center;
     }
   
     .navbar img{
@@ -63,11 +64,11 @@
       display: block;
     }
     h2{
-        font-size: large;
-        color:rgba(217, 129, 129, 0.8);
+        font-size: 40px;
+        color:rgba(255, 109, 109, 0.8);
     }
     .title{
-      color:#9D5C63;
+      color:#963b44;
       font-size: medium;
     }
     .button-link {
@@ -94,6 +95,9 @@
     max-width: 600px;
     position: relative;
     overflow: hidden;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
   .description::after{
     content: '';
@@ -122,13 +126,6 @@
     left: 100%;
   }
 }
-  .Coolbutton{
-    background-color: rgba(218, 139, 139, 0.8);
-    border-radius: 5px;
-    padding: 5px;
-    margin: 5px 0;
-    color: #333;
-  }
 
   .name{ 
     font-size: 2rem; 
@@ -161,7 +158,7 @@
         I enjoy coding, learning new things, and having fun!
     </p>
     <p>
-        When I am not coding, I am probably cooking, trying out new cafes, designing and sewing my own clothes, or gyming.  
+        When I am not coding, I am probably cooking, trying out new cafes, designing and sewing my own clothes, gyming or playing badminton.  
     </p>
     <a href="src/routes/hobbies/+page.svelte">Click here to see my hobbies at work(maybe an icon of food)</a>
   
@@ -190,4 +187,5 @@
     <img src="src/img/gitIcon.png" class="icon" on:click={openGithub}>
     <img src="src/img/linkedInIcon.png" class="icon "on:click={openGithub}>
     <img src="src/img/spotifyIcon.png" class="icon" on:click={openSpotify}>
+    <img src="src/img/emailIcon.png" class="icon" on:click={sendEmail}>
   </section>
