@@ -15,6 +15,9 @@
     function openGithub() {
       window.open('https://github.com/Douglasmyu');
     }
+    function openSpotify(){
+      window.open('https://open.spotify.com/user/douglife-us?si=e9b2a5f65a064dcc');
+    }
   </script>
   
   <style>
@@ -80,7 +83,6 @@
     font-size: 16px;
   }
 
-
   .description{
     background-color: rgba(206, 184, 184, 0.8); /* Light background color */
     border-radius: 10px; /* Rounded corners */
@@ -127,9 +129,19 @@
     margin: 5px 0;
     color: #333;
   }
+
   .name{ 
     font-size: 2rem; 
   }
+
+  .icon{
+    cursor: pointer;
+  }
+
+  .icon:hover{
+    opacity: 0.8;
+  }
+
   </style>
   
   <div class="navbar">
@@ -171,11 +183,11 @@
   
 
   <section id="links" > <!--Links section-->
-    <h2>add links with logos to github, linkedin, spotify, and email</h2>
     <p class="title">
       Connect with me!
   </p>
     <!-- <button class="Coolbutton" on:click={openGithub}>github</button> -->
-    <img src="src/img/gitIcon.png" on:click={openGithub}>
-    <img src="src/img/linkedInIcon.png" on:click={openGithub}>
+    <img src="src/img/gitIcon.png" class="icon" on:click={openGithub}>
+    <img src="src/img/linkedInIcon.png" class="icon "on:click={openGithub}>
+    <img src="src/img/spotifyIcon.png" class="icon" on:click={openSpotify}>
   </section>
