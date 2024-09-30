@@ -5,16 +5,6 @@
     function navigateTo(section) {
       activeSection = section;
     }
-    function handsubmit(event){
-        event.preventDefault();
-        alert('Your message has been sent');
-    }
-    function sendEmail() {
-      window.location.href = "mailto:douglasmyu@csu.fullerton.edu?subject=Hello&body=This%20is%20the%20body";
-  }
-    function openGithub() {
-      window.open('https://github.com/Douglasmyu');
-    }
   </script>
   
   <style>
@@ -130,27 +120,10 @@
     <p class="title">
         Connect with me!
     </p>
-    <p>
-      <button class="Coolbutton" on:click={openGithub}>github</button>
-    </p>
-    
-    <p> 
-      <button class="Coolbutton" on:click={sendEmail}>Send Email</button>
-    </p>
    
   </section>
   <section id="projects"> <!-- projects section-->
-    <article>
-      <h2>My Projects</h2>
-        <a href = https://sympto-quest-phi.vercel.app/login><h2>SymptoQuest</h2></a>
-            <p class="description">
-                SymptoQuest is a web application that provides accurate medical diagnosis based on user input symptoms
-            </p>
-        <a href= https://github.com/Douglasmyu/svelteGPT><h2>SvelteGPT</h2></a>
-            <p class="description">
-              A website to run a chatbox using svelte.  
-            </p>
-    </article>
+
   </section>
 
 

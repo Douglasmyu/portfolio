@@ -57,8 +57,8 @@
       display: block;
     }
     h2{
-        font-size: medium;
-        color:#9D5C63;
+        font-size: large;
+        color:rgba(217, 129, 129, 0.8);
     }
     .title{
       color:#9D5C63;
@@ -79,7 +79,7 @@
 
 
   .description{
-    background-color: rgba(218, 139, 139, 0.8); /* Light background color */
+    background-color: rgba(206, 184, 184, 0.8); /* Light background color */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 8px rgb(75, 69, 69); /* Subtle shadow effect */
     padding: 15px; /* Spacing inside the box */
@@ -87,7 +87,36 @@
     color: #333; /* Text color */
     font-size: 1rem; /* Font size for the text */
     max-width: 600px;
+    position: relative;
+    overflow: hidden;
   }
+  .description::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.4) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    animation: shiny 3s infinite;
+  }
+
+  @keyframes shiny {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
   .Coolbutton{
     background-color: rgba(218, 139, 139, 0.8);
     border-radius: 5px;
@@ -112,7 +141,7 @@
   
   <section id="about"> <!--about me section-->
     <h2>About Me</h2>
-    <p class = "description">
+    <p>
         hi. I am currently a Computer Science student at Cal State Fullerton.  
         I enjoy coding, learning new things, and having fun!
     </p>
@@ -138,7 +167,7 @@
   </section>
   
 
-  <section id="links" >
+  <section id="links" > <!--Links section-->
     <h2>add links with logos to github, linkedin, spotify, and email</h2>
     <p class="title">
       Connect with me!
