@@ -1,7 +1,8 @@
 <script> //about me or main page
     // You can add JavaScript functionality here if needed
     let activeSection = 'about';
-    import Button from "./Button.svelte";
+    import Button from "./Button.svelte"; //need to switch to toggle
+    import Toggle from "./Button.svelte"
     function navigateTo(section) {
       activeSection = section;
     }
@@ -61,10 +62,6 @@
         object-fit: cover; 
         margin-right: 1rem;
         
-    }
-  
-    .active-section {
-      display: block;
     }
 
     h2{
@@ -157,7 +154,8 @@
         <a href="#about" class:active={activeSection === 'about'} on:click={() => navigateTo('about')}>About Me</a>
         <a href="#projects" class:active={activeSection === 'projects'} on:click={() => navigateTo('projects')}>Projects</a>
         <a href="#links" class:active={activeSection === 'links'} on:click={() => navigateTo('links')}>Links</a>
-        <Button>toggle dark mode</Button>
+        <!-- <Toggle>dark mode</Toggle> -->
+        <Button />
     </div>
   </div>
   
@@ -198,8 +196,8 @@
       Connect with me!
   </p>
     <!-- <button class="Coolbutton" on:click={openGithub}>github</button> -->
-    <img src="src/img/gitIcon.png" class="icon" on:click={openGithub}>
-    <img src="src/img/linkedInIcon.png" class="icon "on:click={openGithub}>
-    <img src="src/img/spotifyIcon.png" class="icon" on:click={openSpotify}>
-    <img src="src/img/emailIcon.png" class="icon" on:click={sendEmail}>
+    <img src="/src/img/gitIcon.png" class="icon" on:click={openGithub}>
+    <img src="/src/img/linkedInIcon.png" class="icon "on:click={openGithub}>
+    <img src="/src/img/spotifyIcon.png" class="icon" on:click={openSpotify}>
+    <img src="/src/img/emailIcon.png" class="icon" on:click={sendEmail}>
   </section>
