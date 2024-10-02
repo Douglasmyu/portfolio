@@ -1,7 +1,7 @@
 <script> //about me or main page
     // You can add JavaScript functionality here if needed
     let activeSection = 'about';
-
+    import Button from "./Button.svelte";
     function navigateTo(section) {
       activeSection = section;
     }
@@ -157,7 +157,7 @@
         <a href="#about" class:active={activeSection === 'about'} on:click={() => navigateTo('about')}>About Me</a>
         <a href="#projects" class:active={activeSection === 'projects'} on:click={() => navigateTo('projects')}>Projects</a>
         <a href="#links" class:active={activeSection === 'links'} on:click={() => navigateTo('links')}>Links</a>
-        <button>toggle dark mode</button>
+        <Button>toggle dark mode</Button>
     </div>
   </div>
   

@@ -1,9 +1,8 @@
 <script>
 	import Button from './Button.svelte'
-	let name = 'world';
 </script>
 
-<h1>Hello, {name}!</h1>
+
 <Button>
 	Toggle
 </Button>
