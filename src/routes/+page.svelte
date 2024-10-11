@@ -149,7 +149,7 @@
   
   <div class="navbar">
     <div class = "navbar-left">
-        <img src= "/src/img/pfp.jpg" alt="pfp">
+        <img src= "/img/pfp.jpg" alt="pfp">
         <center><p class="name"><b>douglas yu</b></p></center>
         <a href="#about" class:active={activeSection === 'about'} on:click={() => navigateTo('about')}>About Me</a>
         <a href="#projects" class:active={activeSection === 'projects'} on:click={() => navigateTo('projects')}>Projects</a>
@@ -168,7 +168,7 @@
         When I am not coding, I am probably cooking, trying out new cafes, designing and sewing my own clothes, gyming or playing badminton.  
     </p>
     <a href="src/routes/hobbies/+page.svelte">Click here to see my hobbies at work(maybe an icon of food)</a>
-    <img src="/src/img/resumeIcon.png" class="icon" on:click={openResume}>
+    <img src="/img/resumeIcon.png" class="icon" on:click={openResume}>
   
    
   </section>
@@ -196,8 +196,8 @@
       Connect with me!
   </p>
     <!-- <button class="Coolbutton" on:click={openGithub}>github</button> -->
-    <img src="/src/img/gitIcon.png" class="icon" on:click={openGithub}>
-    <img src="/src/img/linkedInIcon.png" class="icon "on:click={openGithub}>
-    <img src="/src/img/spotifyIcon.png" class="icon" on:click={openSpotify}>
-    <img src="/src/img/emailIcon.png" class="icon" on:click={sendEmail}>
+    <img src="/img/gitIcon.png" class="icon" on:click={openGithub}>
+    <img src="/img/linkedInIcon.png" class="icon "on:click={openGithub}>
+    <img src="/img/spotifyIcon.png" class="icon" on:click={openSpotify}>
+    <img src="/img/emailIcon.png" class="icon" on:click={sendEmail}>
   </section>
