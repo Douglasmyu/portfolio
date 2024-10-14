@@ -179,7 +179,7 @@
             <p class="description">
               SymptoQuest is a web application that provides accurate medical diagnosis based on user input symptoms
             </p>
-        <a href = https://github.com><h2>Nyaan Cat</h2></a>
+        <a href = https://github.com/Tepah/Project-Nyaan><h2>Nyaan Cat</h2></a>
             <p class="description">
               Walk through space as Nyaan the space cat and eat as many smelly fish while dodging the falling bombs
             </p>
