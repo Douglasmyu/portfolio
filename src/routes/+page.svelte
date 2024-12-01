@@ -19,8 +19,13 @@
     function openSpotify(){
       window.open('https://open.spotify.com/user/douglife-us?si=e9b2a5f65a064dcc');
     }
+    
+    const resumePath = "/Douglas-2.pdf";
     function openResume(){
-      window.open('');
+      const link = document.createElement('a');
+      link.href = resumePath; // Path to your PDF file
+      link.download = "Douglas_Resume.pdf"; // Suggested filename for the download
+      link.click(); // Programmatically trigger the download
     }
   </script>
   
@@ -165,9 +170,8 @@
         I enjoy coding, learning new things, and having fun!
     </p>
     <p>
-        When I am not coding, I am probably cooking, trying out new cafes, designing and sewing my own clothes, gyming or playing badminton.  
+        When I am not coding, I am probably cooking, trying out new cafes, designing and sewing my own clothes, gyming, golfing, or playing badminton.  
     </p>
-    <a href="src/routes/hobbies/+page.svelte">Click here to see my hobbies at work(maybe an icon of food)</a>
     <img src="/img/resumeIcon.png" class="icon" on:click={openResume}>
   
    
