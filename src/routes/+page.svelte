@@ -7,9 +7,14 @@
       activeSection = section;
     }
 
-    function sendEmail() {
-      window.location.href = "mailto:douglasmyu@csu.fullerton.edu?subject=Hello&body=This%20is%20the%20body";
-    }
+    let email = '';
+    let subject = '';
+    let message = '';
+
+    const sendEmail = () => {
+    const mailtoLink = `mailto:douglasmyu@csu.fullerton.edu?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+    window.location.href = mailtoLink;
+    };
     function openLinkedIn(){
       window.open('https://www.linkedin.com/in/douglas-yu-51614b165/');
     }
@@ -30,6 +35,29 @@
   </script>
   
   <style>
+      .contact-form {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      margin: 0 auto;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      margin-bottom: 10px;
+      padding: 8px;
+      font-size: 1rem;
+    }
+    .contact-form button {
+      padding: 10px;
+      background-color: rgba(255, 109, 109, 0.8);
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .contact-form button:hover {
+      background-color: rgba(255, 109, 109, 0.8);
+    }
+
     /* Basic styling for the menu and sections */
     .navbar {
       display: flex;
@@ -194,7 +222,15 @@
     </article>
   </section>
   
-
+  <section>
+    <div class="contact-form">
+      <h2>Contact Me</h2>
+      <input type="email" bind:value={email} placeholder="Your Email" required />
+      <input type="text" bind:value={subject} placeholder="Subject" required />
+      <textarea bind:value={message} placeholder="Your Message" rows="4" required></textarea>
+      <button on:click={sendEmail}>Send Email</button>
+    </div>
+  </section>
   <section id="links" > <!--Links section-->
     <p class="title">
       Connect with me!
@@ -203,5 +239,4 @@
     <img src="/img/gitIcon.png" class="icon" on:click={openGithub}>
     <img src="/img/linkedInIcon.png" class="icon "on:click={openGithub}>
     <img src="/img/spotifyIcon.png" class="icon" on:click={openSpotify}>
-    <img src="/img/emailIcon.png" class="icon" on:click={sendEmail}>
   </section>
