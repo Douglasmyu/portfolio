@@ -237,6 +237,6 @@
   </p>
     <!-- <button class="Coolbutton" on:click={openGithub}>github</button> -->
     <img src="/img/gitIcon.png" class="icon" on:click={openGithub}>
-    <img src="/img/linkedInIcon.png" class="icon "on:click={openGithub}>
+    <img src="/img/linkedInIcon.png" class="icon "on:click={openLinkedIn}>
     <img src="/img/spotifyIcon.png" class="icon" on:click={openSpotify}>
   </section>
