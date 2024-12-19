@@ -12,9 +12,14 @@
     let message = '';
 
     const sendEmail = () => {
-    const mailtoLink = `mailto:douglasmyu@csu.fullerton.edu?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
-    window.location.href = mailtoLink;
-    };
+    // Simulate sending the email by showing an alert
+      alert('Message Sent!');
+
+    // Clear the form after sending
+      email = '';
+      subject = '';
+      message = '';
+  };
     function openLinkedIn(){
       window.open('https://www.linkedin.com/in/douglas-yu-51614b165/');
     }
